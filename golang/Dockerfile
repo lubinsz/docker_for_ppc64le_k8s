@@ -1,7 +1,12 @@
 FROM ppc64le/ubuntu 
 
 # gcc for cgo
-RUN apt-get update && apt-get install -y --no-install-recommends golang 
+RUN apt-get update && apt-get install -y --no-install-recommends golang \
+	git \
+	openssl \
+	ca-certificates \
+	make \
+	gcc  
 
 ENV GOLANG_VERSION 1.6.2
 
